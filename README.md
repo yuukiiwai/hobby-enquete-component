@@ -9,7 +9,7 @@ https://www.npmjs.com/package/hobby-enquete-component
 https://github.com/yuukiiwai/hobby-enquete-component
 
 ## css class name
-___qtitle ... for title css
-___qhead ... for question sentence css
-___selectul ... for choices ul css
-___selectli ... for choices li css
+* ___qtitle ... for title css
+* ___qhead ... for question sentence css
+* ___selectul ... for choices ul css
+* ___selectli ... for choices li css
