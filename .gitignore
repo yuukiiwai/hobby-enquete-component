@@ -24,7 +24,6 @@ yarn-error.log*
 
 .babelrc
 .vscode
-.eslintrc.js
 .storybook
 yarn.lock
 
