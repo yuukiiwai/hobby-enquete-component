@@ -15,7 +15,7 @@ Default.args = {
     q:
     [
         {
-            "parent":"",
+            "parent":[""],
             "title":"first question",
             "question":"what's your ...",
             "answers":[
@@ -32,7 +32,7 @@ Default.args = {
             ]
         },
         {
-            "parent":"a11",
+            "parent":["a11"],
             "title":"this question is ...",
             "question":"what's your ...",
             "answers":[
@@ -49,7 +49,7 @@ Default.args = {
             ]
         },
         {
-            "parent":"a12",
+            "parent":["a12"],
             "title":"this question is ... ",
             "question":"what's your ...",
             "answers":[

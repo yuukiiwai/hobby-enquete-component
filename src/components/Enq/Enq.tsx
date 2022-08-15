@@ -8,7 +8,7 @@ export interface enqprops {
 }
 
 interface ___question {
-    parent:string,
+    parent:Array<string>,
     title:string,
     question:string,
     answers:Array<___answer>
@@ -22,7 +22,7 @@ interface ___answer {
 
 export const Enq:React.FC<enqprops> = (props:enqprops) => {
     const qdata:Array<___question> = props.q;
-    const [qstuck,setQStuck] = useState<Array<___question>>(qdata.filter((q)=>{return q.parent === ""}).slice(1));
+    const [qstuck,setQStuck] = useState<Array<___question>>(qdata.filter((q)=>{return q.parent.indexOf("") !== -1}).slice(1));
     const [qhead,setQHead] = useState<___question | undefined>(qdata[0]);
 
     // headを更新する
@@ -39,7 +39,7 @@ export const Enq:React.FC<enqprops> = (props:enqprops) => {
             tmpqstuck.push(qstuck[i]);
         }
         for(let i = 0 ; i < qdata.length; i++){
-            if(qdata[i].parent === id){
+            if(qdata[i].parent.indexOf(id) !== -1){
                 tmpqstuck.push(qdata[i]);
             }
         }
