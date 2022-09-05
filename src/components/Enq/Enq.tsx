@@ -7,14 +7,14 @@ export interface enqprops {
     debug?:boolean,
 }
 
-interface ___question {
+export interface ___question {
     parent:Array<string>,
     title:string,
     question:string,
     answers:Array<___answer>
 }
 
-interface ___answer {
+export interface ___answer {
     ansid:string,
     anstext:string,
     ansvalue:string
