@@ -9,7 +9,7 @@ export interface enqprops {
 
 export interface ___question {
     parent:Array<string>,
-    title:string,
+    title?:string,
     question:string,
     answers:Array<___answer>
 }
@@ -85,7 +85,10 @@ export const Enq:React.FC<enqprops> = (props:enqprops) => {
                             <p>parent id :{(qhead as ___question) .parent}</p>
                         </>
                     }
-                    <p className='___qtitle'>{(qhead as ___question).title}</p>
+                    {
+                        (qhead as ___question).title !== undefined &&
+                        <p className='___qtitle'>{(qhead as ___question).title}</p>
+                    }
                     <p className='___qhead'>{(qhead as ___question).question}</p>
                     <ul className='___selectul'>
                         {(qhead as ___question).answers.map((item,key)=>

@@ -1,3 +1,10 @@
+# NEWS
+In ___question interface, the title state become be not necessary.  
+```
+title:string -> title?:string
+```
+I will delete this state step by step.  
+Plese don't use title state.
 # hobby-enquete-component
 ## how to install
 npm i @yuukiiwai/hobby-enquete-component
@@ -26,7 +33,7 @@ export interface enqprops {
 
 interface ___question {
     parent:Array<string>,
-    title:string,
+    title?:string,
     question:string,
     answers:Array<___answer>
 }
@@ -77,7 +84,6 @@ interface ___answer {
     },
     {
         "parent":["a12"],
-        "title":"this question is ... ",
         "question":"what's your ...",
         "answers":[
             {
