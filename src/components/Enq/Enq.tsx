@@ -7,17 +7,58 @@ export interface enqprops {
     debug?:boolean,
 }
 
-export interface ___question {
+export type ___question = {
     parent:Array<string>,
     title?:string,
     question:string,
     answers:Array<___answer>
 }
 
-export interface ___answer {
+export type ___answer = {
     ansid:string,
     anstext:string,
     ansvalue:string
+}
+
+export const is___questions = (arg:any):arg is Array<___question> => {
+    try {
+        let questionsCheck = true;
+        if(Array.isArray(arg) === false){
+            return false;
+        }
+        for(let i = 0;i<arg.length;i++){
+            questionsCheck = questionsCheck && is___question(arg[i]);
+        }
+        return questionsCheck;
+    } catch (error) {
+        return false;
+    }
+}
+
+export const is___question = (arg:any):arg is ___question =>{
+    try {
+        const parentCheck = typeof(arg.parent) !== "undefined" && Array.isArray(arg.parent) && typeof(arg.parent[0]) === 'string';
+        const questionCheck = typeof(arg.question) === 'string';
+        const answersCheck = typeof(arg.answers) !== "undefined" && Array.isArray(arg.answers);
+        let answerCheck = true;
+        for(let i = 0;i<arg.answers.length;i++){
+            answerCheck = answerCheck && is___answer(arg.answers[i]);
+        }
+        return parentCheck && questionCheck && answersCheck && answerCheck;
+    } catch (error) {
+        return false;
+    }
+}
+
+export const is___answer = (arg:any):arg is ___answer =>{
+    try {
+        const ansidCheck = typeof(arg.ansid) === "string";
+        const anstextCheck = typeof(arg.anstext) === "string";
+        const ansvalueCheck = typeof(arg.ansvalue) === "string" ;
+        return ansidCheck && anstextCheck && ansvalueCheck;
+    } catch (error) {
+        return false;
+    }
 }
 
 export const Enq:React.FC<enqprops> = (props:enqprops) => {

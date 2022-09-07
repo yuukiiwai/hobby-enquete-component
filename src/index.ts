@@ -1,1 +1,1 @@
-export {___answer,___question,enqprops,Enq} from './components'
+export {___answer,___question,enqprops,Enq,is___answer,is___question,is___questions} from './components'
