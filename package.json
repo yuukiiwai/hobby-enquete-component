@@ -1,6 +1,6 @@
 {
   "name": "@yuukiiwai/hobby-enquete-component",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "You can display complex enquete if you make a json file written in my structure.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
