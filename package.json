@@ -1,5 +1,5 @@
 {
-  "name": "@yuukiiwai/hobby-enquete-component",
+  "name": "hobby-enquete-component",
   "version": "0.3.1",
   "description": "You can display complex enquete if you make a json file written in my structure.",
   "main": "dist/cjs/index.js",
