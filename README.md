@@ -7,10 +7,10 @@ I will delete this state step by step.
 Plese don't use title state.
 # hobby-enquete-component
 ## how to install
-npm i @yuukiiwai/hobby-enquete-component
+npm i hobby-enquete-component
 
 ## where is package
-https://www.npmjs.com/package/@yuukiiwai/hobby-enquete-component
+https://www.npmjs.com/package/hobby-enquete-component
 
 ## where is github
 https://github.com/yuukiiwai/hobby-enquete-component
